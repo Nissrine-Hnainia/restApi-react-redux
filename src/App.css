@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+}
+.link{
+  margin-right: 10px;
+  text-decoration: none;
+  color: salmon;
+}
+.link:hover{
+  color: white;
+}
+.users{
+  display: flex;
+  width: 80%;
+  margin: 120px auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.home img, .error img{
+  width: 100vw;
+  height: auto;
+}
+.home h1 {
+  color: salmon;
+  margin: 70px auto;
+}
