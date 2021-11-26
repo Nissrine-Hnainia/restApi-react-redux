@@ -1,14 +1,15 @@
 import React, {useEffect} from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { getUsers } from '../redux/actions/userActions';
+import { useDispatch, useSelector } from 'react-redux';
 import UserCard from './UserCard';
+import { getUsers } from './../redux/actions/usersActions';
 
 const UsersList = () => {
-    const users = useSelector(state => state.users)
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getUsers())
     }, [])
+
+    const users = useSelector(state => state.users)
     return (
         <div className="users">
             {users.map(user => <UserCard key={user.id} user={user} />)}
